@@ -1,0 +1,239 @@
+:root {
+    --pink: #f06292;
+    --light-pink: #fce4ec;
+    --beige: #f3e5d8;
+    --text: #444;
+}
+
+* { margin:0; padding:0; box-sizing:border-box; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+
+body { background-color: #fff; color: var(--text); overflow-x: hidden; }
+
+/* Navbar */
+.navbar { padding: 15px 5%; background: #fff; border-bottom: 1px solid #eee; position: sticky; top: 0; z-index: 1000; }
+.nav-container { display: flex; justify-content: space-between; align-items: center; }
+.brand { font-size: 24px; font-weight: bold; color: var(--pink); text-decoration: none; }
+.brand span { color: #8b5e3c; }
+.nav-right { display: flex; gap: 20px; align-items: center; }
+.nav-right a { text-decoration: none; color: #666; font-size: 14px; font-weight: 500; }
+.cart-btn { background: var(--pink); color: #fff !important; padding: 8px 18px; border-radius: 50px; font-weight: bold; text-decoration: none; }
+
+/* Category Nav */
+.category-nav { display: flex; justify-content: center; border-bottom: 1px solid #eee; padding: 12px 0; background: #fff; }
+.cat-links a { margin: 0 15px; text-decoration: none; color: #888; font-weight: 600; font-size: 13px; text-transform: uppercase; padding-bottom: 5px; transition: 0.3s; }
+.cat-links a.active, .cat-links a:hover { color: var(--pink); border-bottom: 2px solid var(--pink); }
+
+/* Page Header (Slider ki jagah jo section hai) */
+.page-title { 
+    text-align: center; 
+    padding: 50px 0; 
+    background: var(--beige); 
+    margin-bottom: 20px; 
+    border-bottom: 1px solid #eee;
+}
+.page-title h1 { color: #8b5e3c; font-size: 32px; letter-spacing: 2px; text-transform: uppercase; }
+
+/* Products Grid */
+.container { max-width: 1200px; margin: 0 auto; padding: 20px; }
+.products-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 25px; }
+
+.product-card { 
+    background: #fff; 
+    border-radius: 15px; 
+    padding: 20px; 
+    text-align: center; 
+    border: 1px solid #f2f2f2; 
+    transition: 0.3s; 
+}
+.product-card:hover { transform: translateY(-8px); box-shadow: 0 15px 30px rgba(0,0,0,0.08); }
+
+.product-card img { width: 100%; height: 220px; object-fit: contain; margin-bottom: 15px; border-radius: 10px; }
+.product-card h3 { font-size: 18px; color: #333; margin-bottom: 8px; }
+.product-card .price { color: var(--pink); font-size: 18px; font-weight: bold; margin-bottom: 15px; }
+
+.add-btn { 
+    background: var(--pink); 
+    color: white; 
+    border: none; 
+    padding: 12px; 
+    width: 100%; 
+    border-radius: 10px; 
+    cursor: pointer; 
+    font-weight: bold; 
+    text-transform: uppercase; 
+    transition: 0.3s;
+}
+.add-btn:hover { background: #e05281; }
+
+/* Mobile View */
+@media (max-width: 768px) {
+    .products-grid { grid-template-columns: repeat(1, 1fr); }
+    .page-title { padding: 30px 0; }
+    .page-title h1 { font-size: 24px; }
+}
+
+
+.hero-wrap {
+    width: 100%;
+    padding: 0 5%; /* Side spacing like Figma */
+    margin: 20px 0;
+}
+
+.hero-bg {
+    width: 100%;
+    height: 420px; 
+    filter: brightness(90%);
+    /* Path ko quotes ke baghair ya single quotes mein check karein */
+    background: url('images/icecream1.JPG');
+    background-size: cover;
+    background-position: center;
+    border-radius: 12px; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.hero-content {
+    text-align: center;
+    color: white !important;
+    font-size: 20px;
+}
+
+.hero-content h1 {
+    font-size: 45px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: white;
+}
+
+.see-menu-btn {
+    background: white;
+    color: #f06292;
+    margin-top: 20px;
+    padding: 12px 30px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 6px;
+    display: inline-block;
+}
+
+/* --- Main Footer Styling --- */
+.main-footer {
+    background-color: rgba(242, 220, 203, 1.0);
+    padding: 60px 5% 20px 5%;
+    border-top: 1px solid #eee;
+    margin-top: 50px;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-box {
+    flex: 1;
+    min-width: 250px;
+}
+
+.footer-box h3 {
+    font-size: 24px;
+    color: var(--pink);
+    margin-bottom: 15px;
+}
+
+.footer-box h3 span { color: #8b5e3c; }
+
+.footer-box h4 {
+    color: #333;
+    margin-bottom: 20px;
+    font-size: 18px;
+}
+
+.footer-box p {
+    color: #666;
+    line-height: 1.8;
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 50px;
+    padding-top: 20px;
+    border-top: 1px solid #eee;
+    color: white;
+    font-size: 19px;
+}
+
+/* Mobile View for Footer */
+@media (max-width: 768px) {
+    .footer-container { text-align: center; flex-direction: column; }
+}
+/* --- Contact Page Specific Styling --- */
+.contact-section {
+    max-width: 600px;
+    margin: 50px auto;
+    background: #fff;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    border: 1px solid #f2f2f2;
+}
+
+.contact-section h2 {
+    color: #8b5e3c;
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+.contact-section label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: var(--text);
+    font-size: 14px;
+}
+
+.contact-section input, 
+.contact-section textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    outline: none;
+    transition: 0.3s;
+}
+
+.contact-section input:focus, 
+.contact-section textarea:focus {
+    border-color: var(--pink);
+    background-color: var(--light-pink);
+}
+
+.contact-section textarea {
+    height: 120px;
+    resize: none;
+}
+
+.contact-section button {
+    background: var(--pink);
+    color: white;
+    border: none;
+    padding: 15px;
+    width: 100%;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.contact-section button:hover {
+    background: #e05281;
+    transform: translateY(-2px);
+}
